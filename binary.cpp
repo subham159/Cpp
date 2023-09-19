@@ -2,11 +2,19 @@
 using namespace std;
 
 int main(){
-    int a[10]={2,4,6,7,8,9,10,17,15},key,l=0,h=9,mid;
+    int a[100];
+    int key,start=0,mid,n,end;
+    cout<<"Enter the no of elements:--\n";
+    cin>>n;
+    cout<<"Enter items in sorted order:--\n";
+    for(int i=0;i<=n;i++){
+        cin>>a[i];
+    }
+    end=n-1;
     cout<<"Enter the key element :---\n";
     cin>>key;
-    while(l<=h){
-        mid=(l+h)/2;
+    while(start<=end){
+        mid=(start+end)/2;
         if(key==a[mid])
         {
             cout<<"Item found:--\n"<<mid;
@@ -14,10 +22,10 @@ int main(){
         }
         else if (key<a[mid])
         {
-            h=mid-1;
+            start=mid-1;
         }
         else{
-            l=mid+1;
+            end=mid+1;
         }
         
     }
