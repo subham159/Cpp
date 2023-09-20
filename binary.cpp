@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     int a[100];
-    int key,start=0,mid,n,end;
+    int key,start,mid,n,end;
     cout<<"Enter the no of elements:--\n";
     cin>>n;
     cout<<"Enter items in sorted order:--\n";
@@ -13,8 +13,8 @@ int main(){
     end=n-1;
     cout<<"Enter the key element :---\n";
     cin>>key;
-    while(start<=end){
-        mid=(start+end)/2;
+    while(end<=start){
+        mid=(end+start)/2;
         if(key==a[mid])
         {
             cout<<"Item found:--\n"<<mid;
